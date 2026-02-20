@@ -16,26 +16,18 @@ namespace PlanetTweaks2.UI
         [SerializeField] private Button green;
         [SerializeField] private Button custom;
 
-        private static Color redColor = new(1, 0, 0, 0);
-        private static Color blueColor = new(0, 0, 1, 0);
-        private static Color disableColor = new(0, 0, 0, 0);
-        public UnityAction<Color> SetColor { get; private set; }
+        [SerializeField] private Keys key;
 
         private bool isEnabled;
-
-        public void Init(UnityAction<Color> setColor)
-        {
-            SetColor = setColor;
-        }
 
         private void Awake()
         {
             if (toggle)
                 toggle.onClick.AddListener(() => Toggle(!isEnabled));
 
-            red.onClick.AddListener(() => SetColor(redColor));
-            blue.onClick.AddListener(() => SetColor(blueColor));
-            green.onClick.AddListener(() => SetColor(new(.3f, .7f, 1)));
+            red.onClick.AddListener(() => SetColor(Colors.redColor));
+            blue.onClick.AddListener(() => SetColor(Colors.blueColor));
+            green.onClick.AddListener(() => SetColor(Colors.greenColor));
             custom.onClick.AddListener(() => UI.colorPicker.Show(color => SetColor(color)));
         }
 
@@ -47,7 +39,12 @@ namespace PlanetTweaks2.UI
             buttons.interactable = enable;
 
             if (!enable)
-                SetColor(disableColor);
+                SetColor(Colors.disableColor);
+        }
+
+        public void SetColor(Color color)
+        {
+            UI.SetValue(key, color);
         }
     }
 }

@@ -1,12 +1,10 @@
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace PlanetTweaks2.UI
 {
-    public partial class PlanetTweaksUI : PTBase
+    public class PlanetTweaksUI : PTBase
     {
         public static PlanetTweaksUI Instance { get; private set; }
 
@@ -20,6 +18,8 @@ namespace PlanetTweaks2.UI
         [SerializeField] private Button exitButton;
 
         [Header("Settings")]
+        [SerializeField] private GameObject colorAlphaSettings;
+        [SerializeField] private GameObject disableColorAlphaSettings;
         [SerializeField] private ColorSettings planetColor;
         [SerializeField] private AlphaSettings planetAlpha;
         [SerializeField] private ColorSettings tailColor;
@@ -40,22 +40,30 @@ namespace PlanetTweaks2.UI
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
-            planetColor.Init(color => SetValue(Key.PlanetColor, color));
-            planetAlpha.Init(alpha => SetValue(Key.PlanetAlpha, alpha));
-            tailColor.Init(color => SetValue(Key.TailColor, color));
-            tailAlpha.Init(alpha => SetValue(Key.TailAlpha, alpha));
-            ringColor.Init(color => SetValue(Key.RingColor, color));
-            ringAlpha.Init(alpha => SetValue(Key.RingAlpha, alpha));
         }
 
         public void Init(GetValueDelegate getValue, SetValueDelegate setValue)
         {
             GetValue = getValue;
             SetValue = setValue;
+
+            SetCurrent(0);
         }
 
-        public delegate object GetValueDelegate(Key key);
-        public delegate void SetValueDelegate(Key key, object value);
+        public void SetCurrent(int index)
+        {
+            current = index;
+
+            var planetColor = (Color)GetValue(Keys.PlanetColor);
+            var isSpecialColor = Colors.IsSpecial(planetColor);
+
+            colorAlphaSettings.SetActive(!isSpecialColor);
+            disableColorAlphaSettings.SetActive(isSpecialColor);
+
+
+        }
+
+        public delegate object GetValueDelegate(Keys key);
+        public delegate void SetValueDelegate(Keys key, object value);
     }
 }

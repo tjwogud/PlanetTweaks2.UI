@@ -8,18 +8,8 @@ namespace PlanetTweaks2.UI
     {
         [SerializeField] private Picker picker;
         [SerializeField] private TMP_InputField input;
-        public UnityAction<float> SetAlpha { get; private set; }
 
-        public void Init(UnityAction<float> setAlpha)
-        {
-            SetAlpha = setAlpha;
-        }
-
-        public void SetValue(float value)
-        {
-            picker.Value = new(value, 0);
-            input.text = ((int)(value * 100)).ToString();
-        }
+        [SerializeField] private Keys key;
 
         private void Awake()
         {
@@ -42,6 +32,17 @@ namespace PlanetTweaks2.UI
                 SetAlpha(value / 100f);
                 picker.Value = new(value / 100f, 0);
             });
+        }
+
+        public void Init(float value)
+        {
+            picker.Value = new(value, 0);
+            input.text = ((int)(value * 100)).ToString();
+        }
+
+        private void SetAlpha(float alpha)
+        {
+            UI.SetValue(key, alpha);
         }
     }
 }
