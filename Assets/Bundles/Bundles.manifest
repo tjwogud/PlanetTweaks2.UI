@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 746810164
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: planettweaks2ui
+      Dependencies: {}
