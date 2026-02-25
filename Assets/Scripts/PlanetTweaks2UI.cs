@@ -31,6 +31,13 @@ namespace PlanetTweaks2.UI
         [SerializeField] private SpecialPlanetSettings specialPlanet;
         [SerializeField] private SpecialObjectSettings specialObject;
 
+        [SerializeField] private GameObject goldLock;
+        [SerializeField] private GameObject overseerLock;
+        [SerializeField] private GameObject rainbowLock;
+        [SerializeField] private GameObject samuraiLock;
+        [SerializeField] private GameObject emojiLock;
+        [SerializeField] private GameObject specialNote;
+
         public ColorPicker colorPicker;
 
         public GetValueDelegate GetValue { get; private set; }
@@ -94,9 +101,28 @@ namespace PlanetTweaks2.UI
             preview.SetImageSize((Vector2)GetValue(Keys.ImageSize));
         }
 
-        public void UpdateSpecials(bool gold, bool rainbow, bool overseer)
+        public void UpdateProgress(bool gold, bool overseer, bool emoji)
         {
+            if (gold) goldLock.SetActive(false);
+            if (overseer) overseerLock.SetActive(false);
+            if (emoji) emojiLock.SetActive(false);
 
+            CheckAllUnlocked();
+        }
+
+        public void UpdateCheatCode(bool rainbow, bool samurai)
+        {
+            if (rainbow) rainbowLock.SetActive(false);
+            if (samurai) samuraiLock.SetActive(false);
+
+            CheckAllUnlocked();
+        }
+
+        public void CheckAllUnlocked()
+        {
+            if (goldLock.activeSelf || overseerLock.activeSelf || emojiLock.activeSelf || rainbowLock.activeSelf || samuraiLock.activeSelf)
+                return;
+            specialNote.SetActive(false);
         }
 
         public void Toggle(bool active)
