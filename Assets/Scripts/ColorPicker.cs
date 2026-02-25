@@ -152,7 +152,7 @@ namespace PlanetTweaks2.UI
                 || hex_input.text.Length != 6
                 || !int.TryParse(hex_input.text, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out int value))
                 {
-                    hex_input.text = ToHex(color);
+                    hex_input.text = Colors.ToHex(color);
                     return;
                 }
                 UpdateColor(new(((value >> 16) & 255) / 255f, ((value >> 8) & 255) / 255f, (value & 255) / 255f));
@@ -225,17 +225,9 @@ namespace PlanetTweaks2.UI
             g_input.text = ((int)(color.g * 255)).ToString();
             b_input.text = ((int)(color.b * 255)).ToString();
 
-            hex_input.text = ToHex(color);
+            hex_input.text = Colors.ToHex(color);
 
             current.color = color;
-        }
-
-        private static string ToHex(Color color)
-        {
-            return
-                ((byte)(color.r * 255)).ToString("X2") +
-                ((byte)(color.g * 255)).ToString("X2") +
-                ((byte)(color.b * 255)).ToString("X2");
         }
     }
 }

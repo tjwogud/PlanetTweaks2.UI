@@ -9,7 +9,7 @@ namespace PlanetTweaks2.UI
         public static PlanetTweaks2UI Instance { get; private set; }
 
         [Header("Preview")]
-        [SerializeField] public Preview preview;
+        public Preview preview;
 
         [Header("Selector")]
         [SerializeField] private TMP_Dropdown planetSelect;
@@ -18,7 +18,7 @@ namespace PlanetTweaks2.UI
         [SerializeField] private Button exitButton;
 
         [Header("Settings")]
-        [SerializeField] private GameObject colorAlphaSettings;
+        [SerializeField] private CanvasGroup colorAlphaSettings;
         [SerializeField] private GameObject disableColorAlphaSettings;
         [SerializeField] private ColorSettings planetColor;
         [SerializeField] private AlphaSettings planetAlpha;
@@ -26,6 +26,11 @@ namespace PlanetTweaks2.UI
         [SerializeField] private AlphaSettings tailAlpha;
         [SerializeField] private ColorSettings ringColor;
         [SerializeField] private AlphaSettings ringAlpha;
+        [SerializeField] private ImageSettings imageSettings;
+
+        [SerializeField] private SpecialPlanetSettings specialPlanet;
+        [SerializeField] private SpecialObjectSettings specialObject;
+
         public ColorPicker colorPicker;
 
         public GetValueDelegate GetValue { get; private set; }
@@ -39,6 +44,8 @@ namespace PlanetTweaks2.UI
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            planetSelect.onValueChanged.AddListener(SetCurrent);
         }
 
         public void Init(GetValueDelegate getValue, SetValueDelegate setValue)
@@ -56,8 +63,14 @@ namespace PlanetTweaks2.UI
             var planetColor = (Color)GetValue(Keys.PlanetColor);
             var isSpecialColor = Colors.IsSpecial(planetColor);
 
-            colorAlphaSettings.SetActive(!isSpecialColor);
+            colorAlphaSettings.interactable = !isSpecialColor;
+            colorAlphaSettings.alpha = isSpecialColor ? .3f : 1;
             disableColorAlphaSettings.SetActive(isSpecialColor);
+
+            var tailColor = (Color)GetValue(Keys.TailColor);
+            this.tailColor.Toggle(tailColor != Colors.disableColor);
+            var ringColor = (Color)GetValue(Keys.RingColor);
+            this.ringColor.Toggle(ringColor != Colors.disableColor);
 
             var planetAlpha = (float)GetValue(Keys.PlanetAlpha);
             this.planetAlpha.Init(planetAlpha);
@@ -74,6 +87,16 @@ namespace PlanetTweaks2.UI
             preview.SetAlpha(Keys.TailAlpha, tailAlpha);
             preview.SetColor(Keys.RingColor, (Color)GetValue(Keys.RingColor));
             preview.SetAlpha(Keys.RingAlpha, ringAlpha);
+
+            imageSettings.UpdateValue();
+            preview.SetImage((PlanetImage)GetValue(Keys.Image));
+            preview.SetImagePosition((Vector2)GetValue(Keys.ImagePosition));
+            preview.SetImageSize((Vector2)GetValue(Keys.ImageSize));
+        }
+
+        public void UpdateSpecials(bool gold, bool rainbow, bool overseer)
+        {
+
         }
 
         public void Toggle(bool active)

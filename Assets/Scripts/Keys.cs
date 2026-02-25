@@ -10,6 +10,11 @@
         RingAlpha,
 
         Samurai,
-        Emoji
+        Emoji,
+
+        Image,
+        ImagePosition,
+        ImageSize,
+        ImageFixRotation
     }
 }

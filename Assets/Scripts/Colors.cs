@@ -4,8 +4,6 @@ namespace PlanetTweaks2.UI
 {
     public static class Colors
     {
-        public readonly static Color redColor = new(1, 0, 0, 0);
-        public readonly static Color blueColor = new(0, 0, 1, 0);
         public readonly static Color greenColor = new(.3f, .7f, 0); // this one is NOT alpha 0, because it doesn't need additional work to apply
         public readonly static Color disableColor = new(0, 0, 0, 0);
 
@@ -26,6 +24,14 @@ namespace PlanetTweaks2.UI
         public static Color WithAlpha(this Color color, float alpha)
         {
             return new(color.r, color.g, color.b, alpha);
+        }
+
+        public static string ToHex(Color color)
+        {
+            return
+                ((byte)(color.r * 255)).ToString("X2") +
+                ((byte)(color.g * 255)).ToString("X2") +
+                ((byte)(color.b * 255)).ToString("X2");
         }
     }
 }

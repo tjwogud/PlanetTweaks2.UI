@@ -23,8 +23,8 @@ namespace PlanetTweaks2.UI
             if (toggle)
                 toggle.onClick.AddListener(() => Toggle(!isEnabled));
 
-            red.onClick.AddListener(() => SetColor(Colors.redColor));
-            blue.onClick.AddListener(() => SetColor(Colors.blueColor));
+            red.onClick.AddListener(() => SetColor(Color.red));
+            blue.onClick.AddListener(() => SetColor(Color.blue));
             green.onClick.AddListener(() => SetColor(Colors.greenColor));
             custom.onClick.AddListener(() => UI.colorPicker.Show(color => SetColor(color)));
         }
@@ -42,13 +42,6 @@ namespace PlanetTweaks2.UI
 
         public void SetColor(Color color)
         {
-            if (key != Keys.PlanetColor)
-            {
-                if (color == Colors.redColor)
-                    color = Color.red;
-                else if (color == Colors.blueColor)
-                    color = Color.blue;
-            }
             UI.SetValue(key, color);
             UI.preview.SetColor(key, color);
         }
