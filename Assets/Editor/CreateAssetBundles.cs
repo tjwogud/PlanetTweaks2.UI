@@ -20,13 +20,15 @@ namespace Assets.Editor
 
             const string bundlePath = "Assets/Bundles/planettweaks2ui";
             const string dllPath = "Library/ScriptAssemblies/PlanetTweaks2.UI.dll";
-            const string target1Path = "G:/불얼모드/PlanetTweaks2/PlanetTweaks2";
-            const string target2Path = "E:/SteamLibrary/steamapps/common/A Dance of Fire and Ice/Mods/PlanetTweaks2";
+            const string localPath = "Assets/Editor/localpath.json";
 
-            CopyTo(bundlePath, target1Path);
-            CopyTo(dllPath, target1Path);
-            CopyTo(bundlePath, target2Path);
-            CopyTo(dllPath, target2Path);
+            var targets = JsonUtility.FromJson<string[]>(localPath);
+
+            foreach (string target in targets)
+            {
+                CopyTo(bundlePath, target);
+                CopyTo(dllPath, target);
+            }
 
             var totalTime = stopwatch.Elapsed.TotalSeconds;
             var copyTime = totalTime - buildTime;

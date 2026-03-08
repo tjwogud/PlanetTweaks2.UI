@@ -4,6 +4,7 @@
 #
 
 localpath.json
+localpath.json.meta
 
 .utmp/
 /[Ll]ibrary/
