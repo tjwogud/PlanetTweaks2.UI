@@ -49,14 +49,6 @@ namespace Assets.Editor
             UnityEngine.Debug.Log($"Build Done in {totalTime:f2}s! (build: {buildTime:f2}s, copy: {copyTime:f2}s)");
         }
 
-        [MenuItem("Assets/Test AssetBundle")]
-        static void TestAssetBundle()
-        {
-            const string bundlePath = "Assets/Bundles/planettweaks2ui";
-
-            GetFilteredDependencies("Assets/Prefabs/PlanetTweaks2UI.prefab");
-        }
-
         private static string[] GetFilteredDependencies(string assetPath)
         {
             var deps = AssetDatabase.GetDependencies(assetPath, true);
