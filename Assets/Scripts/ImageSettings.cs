@@ -1,5 +1,4 @@
-﻿using Ookii.Dialogs;
-using System.IO;
+﻿using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,19 +20,13 @@ namespace PlanetTweaks2.UI
         private float _w = 100;
         private float _h = 100;
 
-        private VistaOpenFileDialog dialog;
-
         private void Awake()
         {
-            dialog = new VistaOpenFileDialog();
-            dialog.Filter = "Image File|*.png;*.jpg;*.jpeg;*.webp;*.bmp;*.gif;*.apng|All Files|*.*";
-            dialog.Title = "Select Image";
-
             fileSelect.onClick.AddListener(() =>
             {
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                var path = (string)UI.GetValue(Keys.ImageSelectDialog);
+                if (path != null)
                 {
-                    var path = dialog.FileName;
                     var ext = Path.GetExtension(path);
                     var isAnim = ext == ".gif" || ext == ".apng";
                     var image = PlanetImage.Create(path);

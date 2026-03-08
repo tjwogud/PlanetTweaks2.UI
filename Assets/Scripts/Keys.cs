@@ -15,6 +15,8 @@
         Image,
         ImagePosition,
         ImageSize,
-        ImageFixRotation
+        ImageFixRotation,
+
+        ImageSelectDialog
     }
 }

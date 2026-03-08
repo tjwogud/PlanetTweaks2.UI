@@ -1,3 +1,4 @@
+using Localizations2;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,6 +45,8 @@ namespace PlanetTweaks2.UI
         public SetValueDelegate SetValue { get; private set; }
 
         public int current;
+
+        public Localization localization;
 
         private void Awake()
         {
