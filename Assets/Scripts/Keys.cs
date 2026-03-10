@@ -17,6 +17,8 @@
         ImageSize,
         ImageFixRotation,
 
-        ImageSelectDialog
+        ImageSelectDialog,
+
+        Language
     }
 }

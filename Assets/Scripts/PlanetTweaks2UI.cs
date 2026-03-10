@@ -14,8 +14,7 @@ namespace PlanetTweaks2.UI
 
         [Header("Selector")]
         [SerializeField] private TMP_Dropdown planetSelect;
-        [SerializeField] private Button saveButton;
-        [SerializeField] private Button loadButton;
+        [SerializeField] private TMP_Dropdown languageSelect;
         [SerializeField] private Button exitButton;
 
         [Header("Settings")]
@@ -45,31 +44,69 @@ namespace PlanetTweaks2.UI
         public SetValueDelegate SetValue { get; private set; }
 
         public int current;
-
         public Localization localization;
+        public SystemLanguage language = SystemLanguage.Korean;
+
+        public static readonly SystemLanguage[] availableLanguages = new SystemLanguage[]
+        { 
+            SystemLanguage.Korean,
+            SystemLanguage.English
+        };
 
         private void Awake()
         {
-            SetValue = (key, value) => Debug.Log($"{key} : {value}");
-
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
             planetSelect.onValueChanged.AddListener(SetCurrent);
+            languageSelect.onValueChanged.AddListener(i =>
+            {
+                language = availableLanguages[i];
+                PTText.TranslateAll();
+                SetValue(Keys.Language, language);
+
+                LayoutRebuilder.ForceRebuildLayoutImmediate(GetComponent<RectTransform>());
+            });
+
+            if (!Application.isEditor) return;
+            SetValue = (key, value) => Debug.Log($"{key} : {value}");
+            localization = new("1QcrRL6LAs8WxJj_hFsEJa3CLM5g3e8Ya0KQlRKXwdlU", 646714919, s => Debug.Log(s), "Assets/PlanetTweaks2", null, () => Translate());
         }
 
-        public void Init(GetValueDelegate getValue, SetValueDelegate setValue)
+        private bool translate;
+
+        public void Translate()
+        {
+            translate = true;
+        }
+
+        private void LateUpdate()
+        {
+            if (translate)
+            {
+                PTText.TranslateAll();
+                translate = false;
+            }
+        }
+
+        public void Init(GetValueDelegate getValue, SetValueDelegate setValue, Localization localization)
         {
             GetValue = getValue;
             SetValue = setValue;
 
             SetCurrent(0);
+
+            this.localization = localization;
+
+            language = (SystemLanguage)GetValue(Keys.Language);
         }
 
         public void SetCurrent(int index)
         {
             current = index;
-            
+
+            if (Application.isEditor) return;
+
             var planetColor = (Color)GetValue(Keys.PlanetColor);
             var isSpecialColor = Colors.IsSpecial(planetColor);
 

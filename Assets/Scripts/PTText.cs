@@ -1,36 +1,91 @@
 ﻿using System.Collections.Generic;
-using System.Drawing;
 using TMPro;
 using UnityEngine;
 
 namespace PlanetTweaks2.UI
 {
-    [RequireComponent(typeof(TMP_Text))]
     public class PTText : PTBase
     {
         [SerializeField] private bool translate;
         [SerializeField] private string key;
         private TMP_Text text;
+        private TMP_InputField input;
+        [SerializeField] private TMP_Dropdown dropdown;
 
         private static readonly List<PTText> texts = new();
+
+        private static TMP_FontAsset font;
+        private static Material material;
 
         private void Awake()
         {
             text = GetComponent<TMP_Text>();
+            input = GetComponent<TMP_InputField>();
+            if (!text && !input)
+            {
+                Destroy(this);
+                Debug.Log(this);
+                return;
+            }
             texts.Add(this);
+
+            if (font != null)
+                SetFont();
         }
 
-        public static void SetLanguage(SystemLanguage language)
+        private void Start()
+        {
+            if (UI.localization.Loaded && !UI.localization.Failed)
+            {
+                Translate();
+            }
+        }
+
+        public void Translate()
+        {
+            if (!translate) return;
+
+            if (dropdown)
+            {
+                text.text = UI.localization.Get(dropdown.options[dropdown.value].text, null, UI.language);
+                return;
+            }
+
+            var value = UI.localization.Get(string.IsNullOrEmpty(key) ? text.text : key, null, UI.language);
+            if (value != null) text.text = value;
+        }
+
+        public static void TranslateAll()
         {
             foreach (var text in texts)
-                if (text.translate)
-                    text.text.text = text.UI.localization.Get(text.key, null, language);
+                text.Translate();
         }
 
         public static void SetFont(TMP_FontAsset font)
         {
+            PTText.font = font;
+            var material = new Material(font.material);
+            material.DisableKeyword("UNDERLAY_ON");
+            PTText.material = material;
             foreach (var text in texts)
-                text.text.font = font;
+            {
+                if (!text) continue;
+                text.SetFont();
+            }
+        }
+
+        private void SetFont()
+        {
+            if (text)
+            {
+                text.font = font;
+                text.fontMaterial = material;
+            }
+            if (input)
+            {
+                input.fontAsset = font;
+                input.textComponent.fontMaterial = material;
+            }
         }
     }
 }

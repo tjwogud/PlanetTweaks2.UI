@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 285466990
+CRC: 2337006801
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bccec3bd3e18270cd1f126207c147c68
+    Hash: 321c8d095ff06b9d2dc5ea3bbbcc21ff
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 5460c2ef0c214a8e3a6c7f77f7dd4659
+    Hash: ba01d7b2ef6db1b75b30098d6fd6e50f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: bccec3bd3e18270cd1f126207c147c68
+    Hash: 321c8d095ff06b9d2dc5ea3bbbcc21ff
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,10 +21,6 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0ba3dd446b6689d40a2ba03bd0c34a9c, type: 3}
@@ -35,11 +31,15 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 9b3e357d594d449498312a6bad7799a9, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: b3a47b297cc14954c8639beb7ede3441, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 8f36fe36e2e64664e95f31f51586cb3e, type: 3}
 - Class: 114
@@ -48,8 +48,6 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 66828de26ee71f04c84ccf197fa56c95, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
 - Class: 114
@@ -63,6 +61,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: a4e4ef8b0ed8c2c48a1e38a44d69a817, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 123c73cc2e3ae7e4f8b70943674db55f, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 596fd1790015de746a5ec6ae60eff6ce, type: 3}
@@ -74,7 +74,11 @@ ClassTypes:
   Script: {fileID: 11500000, guid: de8fb39f90ee81c4595d6e7ada779125, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: c375e464d4e6e974681dec4382528fb9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2913efadbd831e44eaed4e1b0bd0283d, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 128
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -105,6 +109,12 @@ SerializeReferenceClassIdentifiers:
   ClassName: TMPro.TMP_FontFeatureTable
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_FontWeightPair
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_GlyphAdjustmentRecord
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_GlyphPairAdjustmentRecord
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_GlyphValueRecord
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_InputField/OnChangeEvent
 - AssemblyName: Unity.TextMeshPro
@@ -152,6 +162,5 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Toggle/ToggleEvent
 Assets:
-- Assets/Prefabs/ColorPicker.prefab
 - Assets/Prefabs/PlanetTweaks2UI.prefab
 Dependencies: []

@@ -1,0 +1,156 @@
+[
+  {
+    "word": "pt2.planetselect.fire",
+    "localizations": {
+      "Korean": "불 행성",
+      "English": "Fire Planet"
+    }
+  },
+  {
+    "word": "pt2.planetselect.ice",
+    "localizations": {
+      "Korean": "얼음 행성",
+      "English": "Ice Planet"
+    }
+  },
+  {
+    "word": "pt2.planetselect.third",
+    "localizations": {
+      "Korean": "세번째 행성",
+      "English": "Third Planet"
+    }
+  },
+  {
+    "word": "pt2.exit",
+    "localizations": {
+      "Korean": "나가기",
+      "English": "Exit"
+    }
+  },
+  {
+    "word": "pt2.colorsettings",
+    "localizations": {
+      "Korean": "색 설정",
+      "English": "Color Settings"
+    }
+  },
+  {
+    "word": "pt2.colorsettings.planet",
+    "localizations": {
+      "Korean": "행성 색",
+      "English": "Planet Color"
+    }
+  },
+  {
+    "word": "pt2.colorsettings.planet.alpha",
+    "localizations": {
+      "Korean": "행성 투명도",
+      "English": "Planet Transparency"
+    }
+  },
+  {
+    "word": "pt2.colorsettings.tail",
+    "localizations": {
+      "Korean": "꼬리 색",
+      "English": "Tail Color"
+    }
+  },
+  {
+    "word": "pt2.colorsettings.tail.alpha",
+    "localizations": {
+      "Korean": "꼬리 투명도",
+      "English": "Tail Transparency"
+    }
+  },
+  {
+    "word": "pt2.colorsettings.ring",
+    "localizations": {
+      "Korean": "고리 색",
+      "English": "Ring Color"
+    }
+  },
+  {
+    "word": "pt2.colorsettings.ring.alpha",
+    "localizations": {
+      "Korean": "고리 투명도",
+      "English": "Ring Transparency"
+    }
+  },
+  {
+    "word": "pt2.colorsettings.warning",
+    "localizations": {
+      "Korean": "특수 행성이 켜진 상태에선 색을 바꿀 수 없습니다.",
+      "English": "You can't change color while Special Planet is equipped!"
+    }
+  },
+  {
+    "word": "pt2.specialsettings",
+    "localizations": {
+      "Korean": "특수 설정",
+      "English": "Special Settings"
+    }
+  },
+  {
+    "word": "pt2.specialsettings.planet",
+    "localizations": {
+      "Korean": "특수 행성",
+      "English": "Special Planets"
+    }
+  },
+  {
+    "word": "pt2.specialsettings.decoration",
+    "localizations": {
+      "Korean": "특수 장식",
+      "English": "Special Decorations"
+    }
+  },
+  {
+    "word": "pt2.specialsettings.note",
+    "localizations": {
+      "Korean": "특수 행성 및 장식은 특정 스테이지 클리어, 또는 특정 코드 사용으로 해금할 수 있습니다.",
+      "English": "Special Planets and Decorations are unlocked by stage clear, or using code."
+    }
+  },
+  {
+    "word": "pt2.imagesettings",
+    "localizations": {
+      "Korean": "이미지 설정",
+      "English": "Image Settings"
+    }
+  },
+  {
+    "word": "pt2.imagesettings.select",
+    "localizations": {
+      "Korean": "이미지 선택",
+      "English": "Image Selection"
+    }
+  },
+  {
+    "word": "pt2.imagesettings.fileselect",
+    "localizations": {
+      "Korean": "파일 선택",
+      "English": "Select File"
+    }
+  },
+  {
+    "word": "pt2.imagesettings.position",
+    "localizations": {
+      "Korean": "이미지 위치",
+      "English": "Image Position"
+    }
+  },
+  {
+    "word": "pt2.imagesettings.size",
+    "localizations": {
+      "Korean": "이미지 크기",
+      "English": "Image Size"
+    }
+  },
+  {
+    "word": "pt2.imagesettings.fixrot",
+    "localizations": {
+      "Korean": "회전 고정",
+      "English": "Fix Rotation"
+    }
+  }
+]
