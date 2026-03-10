@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 
@@ -16,6 +19,8 @@ namespace PlanetTweaks2.UI
 
         private static TMP_FontAsset font;
         private static Material material;
+
+        private string dump;
 
         private void Awake()
         {
@@ -81,7 +86,7 @@ namespace PlanetTweaks2.UI
                 text.font = font;
                 text.fontMaterial = material;
             }
-            if (input)
+            else if (input)
             {
                 input.fontAsset = font;
                 input.textComponent.fontMaterial = material;

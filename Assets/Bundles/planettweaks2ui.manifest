@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2337006801
+CRC: 4147275767
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 321c8d095ff06b9d2dc5ea3bbbcc21ff
+    Hash: c035c698056f1341ed7a3fc0aa7c87f0
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ba01d7b2ef6db1b75b30098d6fd6e50f
+    Hash: 1ed8a02ae5a66bb67540d506f8c78462
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 321c8d095ff06b9d2dc5ea3bbbcc21ff
+    Hash: c035c698056f1341ed7a3fc0aa7c87f0
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -20,8 +20,12 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ab2114bdc8544297b417dfefe9f1e410, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0ba3dd446b6689d40a2ba03bd0c34a9c, type: 3}
 - Class: 114
@@ -41,6 +45,10 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 2705215ac5b84b70bacc50632be6e391, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 84a92b25f83d49b9bc132d206b370281, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 8f36fe36e2e64664e95f31f51586cb3e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
@@ -59,6 +67,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: e4d17906a3c130743a8e9601f0bd939d, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 2913efadbd831e44eaed4e1b0bd0283d, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: a4e4ef8b0ed8c2c48a1e38a44d69a817, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 123c73cc2e3ae7e4f8b70943674db55f, type: 3}
@@ -74,8 +84,6 @@ ClassTypes:
   Script: {fileID: 11500000, guid: de8fb39f90ee81c4595d6e7ada779125, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: c375e464d4e6e974681dec4382528fb9, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 2913efadbd831e44eaed4e1b0bd0283d, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -126,6 +134,14 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_InputField/TouchScreenKeyboardEvent
 - AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Sprite
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_SpriteCharacter
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_SpriteGlyph
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Style
+- AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.VertexGradient
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.ArgumentCache
@@ -162,5 +178,6 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Toggle/ToggleEvent
 Assets:
+- Assets/TextMesh Pro/Resources/TMP Settings.asset
 - Assets/Prefabs/PlanetTweaks2UI.prefab
 Dependencies: []

@@ -15,28 +15,6 @@ namespace Assets.Editor
 {
     public class CreateAssetBundles
     {
-        [MenuItem("Assets/Test")]
-        static void Test()
-        {
-            var prefab = PrefabUtility.LoadPrefabContents("Assets/Prefabs/PlanetTweaks2UI.prefab");
-
-            Recursive(prefab);
-
-            PrefabUtility.SaveAsPrefabAsset(prefab, "Assets/Prefabs/PlanetTweaks2UI.prefab");
-
-            PrefabUtility.UnloadPrefabContents(prefab);
-        }
-
-        private static void Recursive(GameObject obj, int level = 0)
-        {
-            if (obj.GetComponent<TMP_Text>() || obj.GetComponent<TMP_InputField>())
-                obj.AddComponent<PTText>();
-            for (int i = 0; i < obj.transform.childCount; i++)
-            {
-                Recursive(obj.transform.GetChild(i).gameObject, level + 1);
-            }
-        }
-
         private static IEnumerable<T> GetComps<T>(GameObject obj) where T : Component
         {
             var comp = obj.GetComponent<T>();
