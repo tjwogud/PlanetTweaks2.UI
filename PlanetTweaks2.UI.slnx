@@ -1,0 +1,4 @@
+﻿<Solution>
+  <Project Path="PlanetTweaks2.UI.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+</Solution>

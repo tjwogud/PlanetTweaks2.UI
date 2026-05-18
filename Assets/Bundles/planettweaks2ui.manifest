@@ -1,15 +1,16 @@
 ManifestFileVersion: 0
-CRC: 4147275767
+UnityVersion: 6000.3.10f1
+CRC: 3767827547
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c035c698056f1341ed7a3fc0aa7c87f0
+    Hash: 648b0fa5a0b0bd1e2dd3e7bbfa41fa14
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 1ed8a02ae5a66bb67540d506f8c78462
+    Hash: f2b9dde7618394c7d7290264ca4f0429
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: c035c698056f1341ed7a3fc0aa7c87f0
+    Hash: 0b2978797d2e0bfd608bbb07bcb74665
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -20,73 +21,61 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 49
-  Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: ab2114bdc8544297b417dfefe9f1e410, type: 3}
+  Script: {fileID: 11500000, guid: 97a717c0aa232ea498dc748459a25603, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0ba3dd446b6689d40a2ba03bd0c34a9c, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  Script: {fileID: 11500000, guid: a4e4ef8b0ed8c2c48a1e38a44d69a817, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  Script: {fileID: 11500000, guid: c375e464d4e6e974681dec4382528fb9, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 9b3e357d594d449498312a6bad7799a9, type: 3}
+  Script: {fileID: 11500000, guid: 123c73cc2e3ae7e4f8b70943674db55f, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  Script: {fileID: 11500000, guid: d1006af259d641545b2d899aa2eedb32, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 66828de26ee71f04c84ccf197fa56c95, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e4d17906a3c130743a8e9601f0bd939d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 596fd1790015de746a5ec6ae60eff6ce, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: b3a47b297cc14954c8639beb7ede3441, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 2913efadbd831e44eaed4e1b0bd0283d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8f36fe36e2e64664e95f31f51586cb3e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: de8fb39f90ee81c4595d6e7ada779125, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9b3e357d594d449498312a6bad7799a9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 2705215ac5b84b70bacc50632be6e391, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 84a92b25f83d49b9bc132d206b370281, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 8f36fe36e2e64664e95f31f51586cb3e, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 66828de26ee71f04c84ccf197fa56c95, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 97a717c0aa232ea498dc748459a25603, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: e4d17906a3c130743a8e9601f0bd939d, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 2913efadbd831e44eaed4e1b0bd0283d, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: a4e4ef8b0ed8c2c48a1e38a44d69a817, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 123c73cc2e3ae7e4f8b70943674db55f, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 596fd1790015de746a5ec6ae60eff6ce, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: d1006af259d641545b2d899aa2eedb32, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: de8fb39f90ee81c4595d6e7ada779125, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: c375e464d4e6e974681dec4382528fb9, type: 3}
 - Class: 115
-  Script: {instanceID: 0}
-- Class: 128
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -100,29 +89,11 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
 - AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.FaceInfo_Legacy
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.FontAssetCreationSettings
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.KerningTable
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_Character
-- AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_Dropdown/DropdownEvent
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_Dropdown/OptionData
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_Dropdown/OptionDataList
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_FontFeatureTable
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_FontWeightPair
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_GlyphAdjustmentRecord
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_GlyphPairAdjustmentRecord
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_GlyphValueRecord
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_InputField/OnChangeEvent
 - AssemblyName: Unity.TextMeshPro
@@ -134,15 +105,9 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_InputField/TouchScreenKeyboardEvent
 - AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_Sprite
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_SpriteCharacter
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_SpriteGlyph
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_Style
-- AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.VertexGradient
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Color
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.ArgumentCache
 - AssemblyName: UnityEngine.CoreModule
@@ -150,17 +115,9 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentListenerMode
 - AssemblyName: UnityEngine.CoreModule
-  ClassName: UnityEngine.Events.UnityEvent`1[UnityEngine.Color]
+  ClassName: UnityEngine.Events.UnityEvent`1
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.RectOffset
-- AssemblyName: UnityEngine.TextCoreFontEngineModule
-  ClassName: UnityEngine.TextCore.FaceInfo
-- AssemblyName: UnityEngine.TextCoreFontEngineModule
-  ClassName: UnityEngine.TextCore.Glyph
-- AssemblyName: UnityEngine.TextCoreFontEngineModule
-  ClassName: UnityEngine.TextCore.GlyphMetrics
-- AssemblyName: UnityEngine.TextCoreFontEngineModule
-  ClassName: UnityEngine.TextCore.GlyphRect
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.AnimationTriggers
 - AssemblyName: UnityEngine.UI
@@ -178,6 +135,5 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Toggle/ToggleEvent
 Assets:
-- Assets/TextMesh Pro/Resources/TMP Settings.asset
 - Assets/Prefabs/PlanetTweaks2UI.prefab
 Dependencies: []

@@ -69,6 +69,8 @@ namespace PlanetTweaks2.UI
             });
 
             if (!Application.isEditor) return;
+            UpdateCheatCode(true, true);
+            UpdateProgress(true, true, true);
             SetValue = (key, value) => Debug.Log($"{key} : {value}");
             localization = new("1QcrRL6LAs8WxJj_hFsEJa3CLM5g3e8Ya0KQlRKXwdlU", 646714919, s => Debug.Log(s), "Assets/PlanetTweaks2", null, () => Translate());
         }
@@ -107,17 +109,17 @@ namespace PlanetTweaks2.UI
 
             if (Application.isEditor) return;
 
-            var planetColor = (Color)GetValue(Keys.PlanetColor);
-            var isSpecialColor = Colors.IsSpecial(planetColor);
+            var planetColor = (SimplePlanetColor)GetValue(Keys.PlanetColor);
+            var cannotUseAlpha = planetColor.code >= SimplePlanetColor.NoAlpha.code;
+            
+            colorAlphaSettings.interactable = !cannotUseAlpha;
+            colorAlphaSettings.alpha = cannotUseAlpha ? .3f : 1;
+            disableColorAlphaSettings.SetActive(cannotUseAlpha);
 
-            colorAlphaSettings.interactable = !isSpecialColor;
-            colorAlphaSettings.alpha = isSpecialColor ? .3f : 1;
-            disableColorAlphaSettings.SetActive(isSpecialColor);
-
-            var tailColor = (Color)GetValue(Keys.TailColor);
-            this.tailColor.Toggle(tailColor != Colors.disableColor);
-            var ringColor = (Color)GetValue(Keys.RingColor);
-            this.ringColor.Toggle(ringColor != Colors.disableColor);
+            var tailColor = (SimplePlanetColor)GetValue(Keys.TailColor);
+            this.tailColor.Toggle(tailColor != SimplePlanetColor.Disable);
+            var ringColor = (SimplePlanetColor)GetValue(Keys.RingColor);
+            this.ringColor.Toggle(ringColor != SimplePlanetColor.Disable);
 
             var planetAlpha = (float)GetValue(Keys.PlanetAlpha);
             this.planetAlpha.Init(planetAlpha);
@@ -130,9 +132,9 @@ namespace PlanetTweaks2.UI
 
             preview.SetColor(Keys.PlanetColor, planetColor);
             preview.SetAlpha(Keys.PlanetAlpha, planetAlpha);
-            preview.SetColor(Keys.TailColor, (Color)GetValue(Keys.TailColor));
+            preview.SetColor(Keys.TailColor, (SimplePlanetColor)GetValue(Keys.TailColor));
             preview.SetAlpha(Keys.TailAlpha, tailAlpha);
-            preview.SetColor(Keys.RingColor, (Color)GetValue(Keys.RingColor));
+            preview.SetColor(Keys.RingColor, (SimplePlanetColor)GetValue(Keys.RingColor));
             preview.SetAlpha(Keys.RingAlpha, ringAlpha);
 
             imageSettings.UpdateValue();

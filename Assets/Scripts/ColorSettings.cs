@@ -23,10 +23,10 @@ namespace PlanetTweaks2.UI
             if (toggle)
                 toggle.onClick.AddListener(() => Toggle(!isEnabled));
 
-            red.onClick.AddListener(() => SetColor(Color.red));
-            blue.onClick.AddListener(() => SetColor(Color.blue));
-            green.onClick.AddListener(() => SetColor(Colors.greenColor));
-            custom.onClick.AddListener(() => UI.colorPicker.Show(color => SetColor(color)));
+            red.onClick.AddListener(() => SetColor(SimplePlanetColor.DefaultRed));
+            blue.onClick.AddListener(() => SetColor(SimplePlanetColor.DefaultBlue));
+            green.onClick.AddListener(() => SetColor(SimplePlanetColor.Green));
+            custom.onClick.AddListener(() => UI.colorPicker.Show(color => SetColor(new(color))));
         }
 
         public void Toggle(bool enable)
@@ -37,10 +37,10 @@ namespace PlanetTweaks2.UI
             buttons.interactable = enable;
 
             if (!enable)
-                SetColor(Colors.disableColor);
+                SetColor(SimplePlanetColor.Disable);
         }
 
-        public void SetColor(Color color)
+        public void SetColor(SimplePlanetColor color)
         {
             UI.SetValue(key, color);
             UI.preview.SetColor(key, color);

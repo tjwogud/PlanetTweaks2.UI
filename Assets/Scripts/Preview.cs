@@ -23,45 +23,45 @@ namespace PlanetTweaks2.UI
         // private bool disableTailCustom = true;
         private bool disableRingCustom = true;
 
-        public void SetColor(Keys key, Color color)
+        public void SetColor(Keys key, SimplePlanetColor color)
         {
             switch (key)
             {
                 case Keys.PlanetColor:
-                    if (color == Color.red || color == Color.blue || Colors.IsSpecial(color))
+                    if (color.isSpecial)
                     {
                         redPlanet.gameObject.SetActive(false);
                         bluePlanet.gameObject.SetActive(false);
                         customPlanet.gameObject.SetActive(false);
                         goldPlanet.gameObject.SetActive(false);
                         rainbow.enabled = false;
-                        if (color == Color.red)
+                        if (color == SimplePlanetColor.DefaultRed)
                         {
                             redPlanet.gameObject.SetActive(true);
                             if (disableRingCustom)
                                 SetRingColor(Color.red);
                             return;
                         }
-                        else if (color == Color.blue)
+                        else if (color == SimplePlanetColor.DefaultBlue)
                         {
                             bluePlanet.gameObject.SetActive(true);
                             if (disableRingCustom)
                                 SetRingColor(Color.blue);
                             return;
                         }
-                        else if (color == Colors.goldColor)
+                        else if (color == SimplePlanetColor.Gold)
                         {
                             disableRingCustom = true;
                             goldPlanet.gameObject.SetActive(true);
                             SetRingColor(Colors.realGoldColor);
                         }
-                        else if (color == Colors.rainbowColor)
+                        else if (color == SimplePlanetColor.Rainbow)
                         {
                             disableRingCustom = true;
                             customPlanet.gameObject.SetActive(true);
                             rainbow.enabled = true;
                         }
-                        else if (color == Colors.overseerColor)
+                        else if (color == SimplePlanetColor.Overseer)
                         {
                             disableRingCustom = true;
                             customPlanet.gameObject.SetActive(true);
@@ -74,13 +74,13 @@ namespace PlanetTweaks2.UI
                     customPlanet.gameObject.SetActive(true);
                     goldPlanet.gameObject.SetActive(false);
                     rainbow.enabled = false;
-                    SetPlanetColor(color);
+                    SetPlanetColor(color.color);
                     break;
                 case Keys.TailColor:
                     // welp... i don't know about particles in unity, that's way too hard for me...
                     break;
                 case Keys.RingColor:
-                    if (color == Colors.disableColor)
+                    if (color == SimplePlanetColor.Disable)
                     {
                         disableRingCustom = true;
                         SetRingColor(redPlanet.gameObject.activeSelf
@@ -95,7 +95,7 @@ namespace PlanetTweaks2.UI
                         return;
                     }
                     disableRingCustom = false;
-                    SetRingColor(color);
+                    SetRingColor(color.color);
                     break;
             }
         }

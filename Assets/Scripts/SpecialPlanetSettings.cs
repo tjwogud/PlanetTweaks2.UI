@@ -14,15 +14,14 @@ namespace PlanetTweaks2.UI
         {
             disable.onClick.AddListener(() =>
             {
-                if (Colors.IsSpecial((Color)UI.GetValue(Keys.PlanetColor)))
-                    SetColor(new(.8f, .8f, .8f));
+                SetColor(new(new(.8f, .8f, .8f)));
             });
-            gold.onClick.AddListener(() => SetColor(Colors.goldColor));
-            rainbow.onClick.AddListener(() => SetColor(Colors.rainbowColor));
-            overseer.onClick.AddListener(() => SetColor(Colors.overseerColor));
+            gold.onClick.AddListener(() => SetColor(SimplePlanetColor.Gold));
+            rainbow.onClick.AddListener(() => SetColor(SimplePlanetColor.Rainbow));
+            overseer.onClick.AddListener(() => SetColor(SimplePlanetColor.Overseer));
         }
 
-        public void SetColor(Color color)
+        public void SetColor(SimplePlanetColor color)
         {
             UI.SetValue(Keys.PlanetColor, color);
             UI.preview.SetColor(Keys.PlanetColor, color);
